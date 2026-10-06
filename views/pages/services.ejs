@@ -1,0 +1,57 @@
+<section class="page-header">
+  <div class="wrap">
+    <span class="section-subtitle"><%- icon('heart-pulse') %> Our Services</span>
+    <h1>Chiropractic Care Designed For Balance And Vitality</h1>
+    <p>From auto accident recovery to prenatal wellness, our Kansas City chiropractors offer personalized, evidence-based treatments.</p>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <span>Services</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="services-grid">
+      <% services.forEach((service, i) => { %>
+      <article class="service-tile hover-lift" data-reveal data-delay="<%= (i % 3) + 1 %>">
+        <div class="img">
+          <img src="<%= service.image %>" alt="<%= service.alt %>" width="400" height="220" loading="lazy" />
+        </div>
+        <div class="txt">
+          <h3><%= service.title %></h3>
+          <p><%= service.summary %></p>
+          <a class="lnk" href="/services/<%= service.id %>">Learn more <%- icon('arrow-right','ico-xs') %></a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap text-center">
+    <span class="section-subtitle"><%- icon('stethoscope') %> How It Works</span>
+    <h2 class="display-3" style="margin-top:12px">Your Care Journey In Three Steps</h2>
+    <p class="lead" style="margin:14px auto 0">A simple, transparent process built around your needs and goals.</p>
+
+    <div class="steps" style="margin-top:50px">
+      <div class="step" data-reveal data-delay="1">
+        <div class="num">1</div>
+        <h3>Consultation & Assessment</h3>
+        <p>We listen first. A thorough exam and posture analysis reveals the true source of your discomfort.</p>
+      </div>
+      <div class="step" data-reveal data-delay="2">
+        <div class="num">2</div>
+        <h3>Personalized Care Plan</h3>
+        <p>Targeted adjustments, soft-tissue work and corrective exercises built around your goals and lifestyle.</p>
+      </div>
+      <div class="step" data-reveal data-delay="3">
+        <div class="num">3</div>
+        <h3>Lasting Relief & Wellness</h3>
+        <p>Ongoing support and prevention strategies so you stay mobile, strong and pain-free for the long run.</p>
+      </div>
+    </div>
+
+    <a href="/contact" class="btn btn-primary btn-lg" style="margin-top:44px">Book Your First Visit <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+  </div>
+</section>

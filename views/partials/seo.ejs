@@ -1,0 +1,88 @@
+<meta name="description" content="<%= typeof description !== 'undefined' ? description : 'SpineVita is Kansas City\'s trusted chiropractic clinic offering auto accident injury care, sciatica relief, headache treatment, sports rehab, prenatal care and spinal decompression.' %>" />
+<link rel="canonical" href="<%= typeof canonical !== 'undefined' ? canonical : (siteUrl + path) %>" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SpineVita Chiropractic" />
+<meta property="og:title" content="<%= typeof title !== 'undefined' ? title : 'SpineVita Chiropractic | Kansas City Chiropractor & Wellness Care' %>" />
+<meta property="og:description" content="<%= typeof description !== 'undefined' ? description : 'SpineVita is Kansas City\'s trusted chiropractic clinic offering auto accident injury care, sciatica relief, headache treatment, sports rehab, prenatal care and spinal decompression.' %>" />
+<meta property="og:url" content="<%= typeof canonical !== 'undefined' ? canonical : (siteUrl + path) %>" />
+<meta property="og:image" content="<%= typeof ogImage !== 'undefined' ? ogImage : (siteUrl + '/images/hero.webp') %>" />
+<meta property="og:image:width" content="1536" />
+<meta property="og:image:height" content="1024" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="<%= typeof title !== 'undefined' ? title : 'SpineVita Chiropractic | Kansas City Chiropractor & Wellness Care' %>" />
+<meta name="twitter:description" content="<%= typeof description !== 'undefined' ? description : 'SpineVita is Kansas City\'s trusted chiropractic clinic offering auto accident injury care, sciatica relief, headache treatment, sports rehab, prenatal care and spinal decompression.' %>" />
+<meta name="twitter:image" content="<%= typeof ogImage !== 'undefined' ? ogImage : (siteUrl + '/images/hero.webp') %>" />
+
+<!-- Geo / Local -->
+<meta name="geo.region" content="US-MO" />
+<meta name="geo.placename" content="Kansas City" />
+<meta name="geo.position" content="39.0997;-94.5786" />
+<meta name="ICBM" content="39.0997, -94.5786" />
+
+<!-- Structured Data: LocalBusiness / MedicalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "Chiropractor"],
+  "@id": "<%= siteUrl %>",
+  "name": "<%= business.name %>",
+  "description": "Kansas City chiropractic clinic offering auto accident injury care, sciatica relief, headaches, sports rehab, prenatal care and spinal decompression.",
+  "url": "<%= siteUrl %>",
+  "logo": "<%= siteUrl %>/images/logo.webp",
+  "image": "<%= siteUrl %>/images/hero.webp",
+  "telephone": "<%= business.phone %>",
+  "email": "<%= business.email %>",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "<%= business.address.street %>",
+    "addressLocality": "<%= business.address.city %>",
+    "addressRegion": "<%= business.address.state %>",
+    "postalCode": "<%= business.address.zip %>",
+    "addressCountry": "<%= business.address.country %>"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "39.0997",
+    "longitude": "-94.5786"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "<%= business.hours.mon.split('-')[0] %>", "closes": "<%= business.hours.mon.split('-')[1] %>" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "<%= business.hours.sat.split('-')[0] %>", "closes": "<%= business.hours.sat.split('-')[1] %>" }
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "<%= business.social.facebook %>",
+    "<%= business.social.instagram %>",
+    "<%= business.social.x %>",
+    "<%= business.social.youtube %>"
+  ]
+}
+</script>
+
+<!-- FAQ Schema (only on pages with FAQ data) -->
+<% if (typeof faqs !== 'undefined' && faqs) { %>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    <% faqs.forEach(function(faq, i) { %>
+    {
+      "@type": "Question",
+      "name": "<%= faq.q %>",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<%= faq.a %>"
+      }
+    }<%= i < faqs.length - 1 ? ',' : '' %>
+    <% }) %>
+  ]
+}
+</script>
+<% } %>

@@ -1,0 +1,76 @@
+<section class="page-header">
+  <div class="wrap">
+    <span class="section-subtitle"><%- icon('file-text') %> <%= post.category %></span>
+    <h1><%= post.title %></h1>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/blog">Blog</a> / <span><%= post.title %></span>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <article class="blog-post">
+      <div class="meta"><span class="cat"><%= post.category %></span><span><%= post.date %></span><span>· <%= post.readTime %></span></div>
+      <div class="feat-img">
+        <img src="<%= post.image %>" alt="<%= post.alt %>" width="820" height="460" />
+      </div>
+      <div class="body">
+        <% post.content.forEach(block => { %>
+        <h2><%= block.heading %></h2>
+        <p><%= block.text %></p>
+        <% }) %>
+      </div>
+      <div style="margin-top:40px;padding:28px;background:var(--section-bg);border-radius:var(--radius-md)">
+        <h3 style="font-size:20px;margin-bottom:10px">Ready to feel better?</h3>
+        <p style="margin-bottom:18px">Schedule a consultation with our Kansas City chiropractors and get a personalized plan for your spine and wellness goals.</p>
+        <a href="/contact" class="btn btn-primary">Book an Appointment <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2 class="display-3 text-center" style="margin-bottom:36px">Related Articles</h2>
+    <div class="blog-grid">
+      <% related.forEach(item => { %>
+      <article class="blog-card">
+        <div class="img">
+          <img src="<%= item.image %>" alt="<%= item.alt %>" width="400" height="200" loading="lazy" />
+        </div>
+        <div class="txt">
+          <span class="cat"><%= item.category %></span>
+          <h4><%= item.title %></h4>
+          <a class="lnk" href="/blog/<%= item.id %>">Read article <%- icon('arrow-right','ico-xs') %></a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "<%= post.title %>",
+  "description": "<%= post.excerpt %>",
+  "image": "<%= siteUrl %><%= post.image %>",
+  "url": "<%= canonical %>",
+  "datePublished": "<%= new Date(post.date).toISOString() %>",
+  "dateModified": "<%= new Date(post.date).toISOString() %>",
+  "author": {
+    "@type": "Organization",
+    "name": "SpineVita Chiropractic"
+  },
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "SpineVita Chiropractic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<%= siteUrl %>/images/logo.webp"
+    }
+  }
+}
+</script>

@@ -1,0 +1,13 @@
+# Cloudflare Pages configuration for SpineVita
+#
+# The site is an Express + EJS app that is prerendered to static HTML by
+# `npm run build` (see build.js). Cloudflare Pages serves the generated
+# dist/ directory, with functions/contact.js handling the contact form POST.
+
+name = "spinevita"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "dist"
+
+# Deployment
+#   npm run deploy   ->  wrangler pages deploy
+#   npm run preview  ->  wrangler pages dev dist   (local Pages emulation)

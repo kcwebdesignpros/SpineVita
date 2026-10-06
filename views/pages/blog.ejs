@@ -1,0 +1,43 @@
+<section class="page-header">
+  <div class="wrap">
+    <span class="section-subtitle"><%- icon('file-text') %> From The Blog</span>
+    <h1>Everything You Didn't Know About Chiropractic Care</h1>
+    <p>Expert tips, recovery guides, and wellness insights from our Kansas City chiropractic team.</p>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <span>Blog</span>
+    </nav>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <% const featured = posts[0]; %>
+    <div class="blog-featured" data-reveal>
+      <div class="img">
+        <img src="<%= featured.image %>" alt="<%= featured.alt %>" width="600" height="340" />
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="cat"><%= featured.category %></span><span><%= featured.date %></span><span>· <%= featured.readTime %></span></div>
+        <h3><%= featured.title %></h3>
+        <p><%= featured.excerpt %></p>
+        <a href="/blog/<%= featured.id %>" class="btn btn-primary">Read Featured Article <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+      <% posts.slice(1).forEach((post, i) => { %>
+      <article class="blog-card hover-lift" data-reveal data-delay="<%= i + 1 %>">
+        <div class="img">
+          <img src="<%= post.image %>" alt="<%= post.alt %>" width="400" height="200" loading="lazy" />
+        </div>
+        <div class="txt">
+          <span class="cat"><%= post.category %></span>
+          <h4><%= post.title %></h4>
+          <p><%= post.excerpt %></p>
+          <a class="lnk" href="/blog/<%= post.id %>">Read article <%- icon('arrow-right','ico-xs') %></a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>

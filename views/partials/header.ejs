@@ -1,0 +1,85 @@
+<div class="top-bar">
+  <div class="wrap top-bar-inner">
+    <div class="top-bar-left">
+      <a href="tel:<%= business.phone %>" class="top-link"><%- icon('phone','ico-sm') %> <%= business.phoneDisplay %></a>
+      <a href="mailto:<%= business.email %>" class="top-link"><%- icon('mail','ico-sm') %> <%= business.email %></a>
+    </div>
+    <div class="top-bar-right">
+      <span class="top-link"><%- icon('clock','ico-sm') %> Mon–Fri 8:00–18:00</span>
+      <span class="top-divider"></span>
+      <div class="top-social">
+        <a href="<%= business.social.facebook %>" aria-label="Facebook" target="_blank" rel="noopener"><%- icon('facebook','ico-sm') %></a>
+        <a href="<%= business.social.instagram %>" aria-label="Instagram" target="_blank" rel="noopener"><%- icon('instagram','ico-sm') %></a>
+        <a href="<%= business.social.x %>" aria-label="X" target="_blank" rel="noopener"><%- icon('twitter','ico-sm') %></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="wrap nav">
+    <a href="/" class="logo" aria-label="SpineVita Chiropractic Home">
+      <img src="/images/logo.webp" alt="SpineVita Chiropractic" width="153" height="44" />
+    </a>
+    <nav class="menu" id="menu" aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <div class="nav-dropdown">
+        <a href="/services" class="nav-dd-toggle">Services <%- icon('chevron-down','car') %></a>
+        <div class="nav-dd-menu">
+          <a href="/services/auto-accident-injury-care"><span class="dd-ic"><%- icon('car') %></span> Auto Accident Care</a>
+          <a href="/services/sciatica-nerve-pain"><span class="dd-ic"><%- icon('zap') %></span> Sciatica &amp; Nerve Pain</a>
+          <a href="/services/headache-migraine-relief"><span class="dd-ic"><%- icon('brain') %></span> Headache Relief</a>
+          <a href="/services/sports-injury-rehab"><span class="dd-ic"><%- icon('activity') %></span> Sports Rehab</a>
+          <a href="/services/prenatal-chiropractic"><span class="dd-ic"><%- icon('baby') %></span> Prenatal Care</a>
+          <a href="/services/spinal-decompression"><span class="dd-ic"><%- icon('bone') %></span> Spinal Decompression</a>
+        </div>
+      </div>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <a href="/contact" class="btn btn-secondary">Book Now <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+    <button class="hamb" id="hamb" aria-label="Open menu" aria-expanded="false" aria-controls="slideMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Slide Menu -->
+<div class="slide-overlay" id="slideOverlay"></div>
+<aside class="slide-menu" id="slideMenu" aria-label="Mobile navigation">
+  <div class="slide-head">
+    <a href="/" class="slide-logo" aria-label="SpineVita home">
+      <img src="/images/logo.webp" alt="SpineVita Chiropractic" width="118" height="34" />
+    </a>
+    <button class="slide-close" id="slideClose" aria-label="Close menu"><%- icon('x') %></button>
+  </div>
+  <nav class="slide-nav" aria-label="Mobile menu">
+    <a href="/" class="slide-link"><span>Home</span> <span class="sa"><%- icon('arrow-right','ico-xs') %></span></a>
+    <a href="/about" class="slide-link"><span>About Us</span> <span class="sa"><%- icon('arrow-right','ico-xs') %></span></a>
+    <div class="slide-group">
+      <a href="/services" class="slide-link slide-parent"><span>Services</span> <span class="sa"><%- icon('arrow-right','ico-xs') %></span></a>
+      <div class="slide-sub">
+        <a href="/services/auto-accident-injury-care"><%- icon('car','ico-sm') %> Auto Accident Care</a>
+        <a href="/services/sciatica-nerve-pain"><%- icon('zap','ico-sm') %> Sciatica &amp; Nerve Pain</a>
+        <a href="/services/headache-migraine-relief"><%- icon('brain','ico-sm') %> Headache Relief</a>
+        <a href="/services/sports-injury-rehab"><%- icon('activity','ico-sm') %> Sports Rehab</a>
+        <a href="/services/prenatal-chiropractic"><%- icon('baby','ico-sm') %> Prenatal Care</a>
+        <a href="/services/spinal-decompression"><%- icon('bone','ico-sm') %> Spinal Decompression</a>
+      </div>
+    </div>
+    <a href="/how-it-works" class="slide-link"><span>How It Works</span> <span class="sa"><%- icon('arrow-right','ico-xs') %></span></a>
+    <a href="/blog" class="slide-link"><span>Blog</span> <span class="sa"><%- icon('arrow-right','ico-xs') %></span></a>
+    <a href="/contact" class="slide-link"><span>Contact</span> <span class="sa"><%- icon('arrow-right','ico-xs') %></span></a>
+  </nav>
+  <div class="slide-contact">
+    <a href="tel:<%= business.phone %>" class="slide-call">
+      <span class="sc-ic"><%- icon('phone') %></span>
+      <div><b>Call us today</b><span><%= business.phoneDisplay %></span></div>
+    </a>
+    <a href="/contact" class="btn btn-primary" style="width:100%;margin-top:12px">Book Appointment <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+  </div>
+</aside>

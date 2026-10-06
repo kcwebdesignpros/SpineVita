@@ -1,0 +1,355 @@
+<% const starRow = icon('star', 'ico-star').repeat(5); %>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot"></span> Feel Better · Move Freely · Live Fully</span>
+      <h1>Relief Starts Here.<br>Get Back To Doing <span>What You Love</span></h1>
+      <p class="lead">Whether you're dealing with a new injury or long-term discomfort, our Kansas City care team is ready to help you feel your best — starting today.</p>
+      <div class="cta-row">
+        <a href="/contact" class="btn btn-primary btn-lg">Claim Your First Session <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+        <a href="/services" class="btn btn-secondary btn-lg">Our Services <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+      <div class="hero-appt">
+        Book an Appointment: <b><%= business.phoneDisplay %></b>
+        <div class="row2">
+          <span><%- icon('mail','ico-sm') %> <a href="mailto:<%= business.email %>"><%= business.email %></a></span>
+          <span><%- icon('globe','ico-sm') %> <a href="<%= siteUrl %>">spinevitakc.com</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-circle" aria-hidden="true"></div>
+      <div class="hero-photo">
+        <img src="/images/hero.webp" alt="Chiropractor performing a spinal adjustment on a patient in Kansas City" width="400" height="400" />
+      </div>
+      <div class="loc-chip"><span class="ic"><%- icon('map-pin') %></span> Serving the Kansas City Metro</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-bar">
+  <div class="wrap">
+    <div class="trust-item">
+      <span class="ic"><%- icon('check-circle') %></span>
+      <span>Same-week appointments available</span>
+    </div>
+    <div class="trust-item">
+      <span class="ic"><%- icon('check-circle') %></span>
+      <span>Insurance &amp; auto accident claims welcome</span>
+    </div>
+    <div class="trust-item">
+      <span class="ic"><%- icon('check-circle') %></span>
+      <span>Drug-free, non-surgical care</span>
+    </div>
+    <div class="trust-item">
+      <span class="ic"><%- icon('check-circle') %></span>
+      <span>Board-certified chiropractors</span>
+    </div>
+  </div>
+</section>
+
+<section class="section why-choose" id="why-choose">
+  <div class="wrap">
+    <div class="why-head" data-reveal>
+      <span class="section-subtitle"><%- icon('sparkles') %> Why SpineVita</span>
+      <h2>Why Kansas City Chooses <span class="gradient-text">SpineVita</span></h2>
+      <p class="lead" style="margin:14px auto 0">From your first call to your final follow-up, every detail of our clinic is designed around one thing: getting you back to the life you love.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal data-delay="1">
+        <div class="why-icon"><%- icon('target') %></div>
+        <h3>Root-Cause Focus</h3>
+        <p>We don't chase symptoms — we find and fix the source of your pain so relief is real and lasting.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="2">
+        <div class="why-icon"><%- icon('sparkles') %></div>
+        <h3>Advanced Technology</h3>
+        <p>Digital posture analysis, non-surgical spinal decompression, and gentle instrument-assisted adjusting.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="3">
+        <div class="why-icon"><%- icon('heart-pulse') %></div>
+        <h3>Personalized Care Plans</h3>
+        <p>No two spines are alike. Your treatment plan is built around your body, your goals, and your schedule.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="1">
+        <div class="why-icon"><%- icon('clock') %></div>
+        <h3>Same-Week Access</h3>
+        <p>Pain doesn't wait. Neither do we — most new patients are seen within 48 hours of calling.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="2">
+        <div class="why-icon"><%- icon('credit-card') %></div>
+        <h3>Insurance &amp; Auto Claims</h3>
+        <p>We work directly with major insurers and handle auto-accident lien billing so you can focus on healing.</p>
+      </div>
+      <div class="why-card" data-reveal data-delay="3">
+        <div class="why-icon"><%- icon('leaf') %></div>
+        <h3>Wellness For Life</h3>
+        <p>Beyond pain relief, we provide ongoing posture, mobility and lifestyle coaching to keep you thriving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-image" data-reveal="fade-left">
+        <img src="/images/about.webp" alt="Modern SpineVita chiropractic clinic interior in Kansas City" width="600" height="520" />
+      </div>
+      <div class="about-content" data-reveal="fade-right">
+        <span class="section-subtitle"><%- icon('users') %> About Us</span>
+        <h2>At <b class="gradient-text">SpineVita</b> we specialize in safe, effective chiropractic care that addresses the <b>root cause</b> of your pain.</h2>
+        <p class="lead">Whether you're recovering from an injury, managing chronic pain, or simply looking to improve your overall wellness, we're here to help you move better, feel stronger, and live pain-free.</p>
+        <a href="/about" class="btn btn-primary">Meet Our Team <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+    </div>
+
+    <div class="stats-row" data-reveal>
+      <div class="stat-card"><div class="n" data-count="5000" data-suffix="+">5K+</div><div class="l">Satisfied Patients Treated</div></div>
+      <div class="stat-card"><div class="n" data-count="12" data-suffix="+">12+</div><div class="l">Years of Excellence</div></div>
+      <div class="stat-card"><div class="n" data-count="99" data-suffix="%">99%</div><div class="l">Patient Satisfaction Rate</div></div>
+      <div class="stat-card"><div class="n" data-count="15" data-suffix="+">15+</div><div class="l">Certified & Trusted Team</div></div>
+      <div class="stat-card"><div class="n">4.9<%- icon('star','stat-star') %></div><div class="l">Average Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt process" id="process">
+  <div class="wrap">
+    <div class="process-head">
+      <span class="section-subtitle"><%- icon('stethoscope') %> How It Works</span>
+      <h2>Comprehensive Chiropractic, One Step At A Time</h2>
+      <p class="lead">Our proven three-step process is designed to find the root cause of your pain, create a plan tailored to you, and support your long-term wellness.</p>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal data-delay="1">
+        <div class="num">1</div>
+        <h3>Consultation & Assessment</h3>
+        <p>We listen first. A thorough exam and posture analysis reveals the true source of your discomfort.</p>
+      </div>
+      <div class="step" data-reveal data-delay="2">
+        <div class="num">2</div>
+        <h3>Personalized Care Plan</h3>
+        <p>Targeted adjustments, soft-tissue work and corrective exercises built around your goals and lifestyle.</p>
+      </div>
+      <div class="step" data-reveal data-delay="3">
+        <div class="num">3</div>
+        <h3>Lasting Relief & Wellness</h3>
+        <p>Ongoing support and prevention strategies so you stay mobile, strong and pain-free for the long run.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="insurance-banner">
+  <div class="wrap">
+    <div class="ib-inner" data-reveal>
+      <div class="ib-left">
+        <div class="ib-icon"><%- icon('shield-check') %></div>
+        <div>
+          <h3>Insurance Accepted & Auto-Accident Liens Welcome</h3>
+          <p>We accept most major insurance plans and handle auto-accident injury claims directly — no upfront out-of-pocket cost for qualified auto-injury cases.</p>
+        </div>
+      </div>
+      <div class="ib-right">
+        <div class="ib-logos">
+          <span>BlueCross BlueShield</span>
+          <span>UnitedHealthcare</span>
+          <span>Aetna</span>
+          <span>Cigna</span>
+          <span>Humana</span>
+          <span>Medicare</span>
+        </div>
+        <a href="/contact" class="btn btn-outline btn-lg">Verify Your Coverage <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark services" id="services">
+  <div class="wrap">
+    <div class="services-head">
+      <span class="section-subtitle"><%- icon('heart-pulse') %> Our Services</span>
+      <h2>Chiropractic Care Designed For Balance And Vitality</h2>
+    </div>
+    <div class="carousel-controls">
+      <button class="car-btn" id="prev" aria-label="Previous service"><%- icon('chevron-left') %></button>
+      <button class="car-btn" id="next" aria-label="Next service"><%- icon('chevron-right') %></button>
+    </div>
+    <div class="track" id="track" role="region" aria-label="Services carousel">
+      <% services.forEach(service => { %>
+      <article class="service-card">
+        <div class="ring">
+          <span class="badge"><%- icon(service.iconName) %></span>
+          <img src="<%= service.image %>" alt="" width="210" height="210" loading="lazy" />
+        </div>
+        <h3><%= service.shortTitle %></h3>
+        <p><%= service.summary %></p>
+        <a class="more" href="/services/<%= service.id %>">Read More <%- icon('arrow-right','ico-xs') %></a>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto 44px">
+      <span class="section-subtitle"><%- icon('star-outline') %> Testimonials</span>
+      <h2 class="display-3">Real Relief From Real Kansas City Patients</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-featured" data-reveal="fade-right">
+        <div class="q"><%- icon('quote') %></div>
+        <p>After years of lower-back pain and a car accident that left me barely able to sit, the SpineVita team gave me my life back. Six weeks in and I'm hiking again for the first time in a decade.</p>
+        <div class="review-author">
+          <img src="https://i.pravatar.cc/120?img=12" alt="Daniel R." width="56" height="56" loading="lazy" />
+          <div>
+            <b>Daniel R.</b>
+            <span>Overland Park, KS</span>
+            <div class="stars"><%- starRow %></div>
+          </div>
+        </div>
+      </div>
+      <div class="reviews-list">
+        <div class="review-card" data-reveal="fade-left" data-delay="1">
+          <div class="top">
+            <div class="id">
+              <img src="https://i.pravatar.cc/120?img=32" alt="Maria L." width="46" height="46" loading="lazy" />
+              <div><b>Maria L.</b><span>Kansas City, MO</span></div>
+            </div>
+            <div class="stars"><%- starRow %></div>
+          </div>
+          <p>The cleanest, most welcoming clinic I've ever visited. They explained everything and never pushed unnecessary visits.</p>
+        </div>
+        <div class="review-card" data-reveal="fade-left" data-delay="2">
+          <div class="top">
+            <div class="id">
+              <img src="https://i.pravatar.cc/120?img=45" alt="James T." width="46" height="46" loading="lazy" />
+              <div><b>James T.</b><span>Independence, MO</span></div>
+            </div>
+            <div class="stars"><%- starRow %></div>
+          </div>
+          <p>My sciatica was gone after three sessions. I wish I'd found them years ago. Booking online took 30 seconds.</p>
+        </div>
+        <div class="review-card" data-reveal="fade-left" data-delay="3">
+          <div class="top">
+            <div class="id">
+              <img src="https://i.pravatar.cc/120?img=5" alt="Priya S." width="46" height="46" loading="lazy" />
+              <div><b>Priya S.</b><span>Leawood, KS</span></div>
+            </div>
+            <div class="stars"><%- starRow %></div>
+          </div>
+          <p>Prenatal care here was a game-changer. Gentle, professional and genuinely caring staff from front desk to doctor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt faq-section" id="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="faq-aside" data-reveal="fade-right">
+        <span class="section-subtitle"><%- icon('message') %> FAQ</span>
+        <h2>Questions, <span class="gradient-text">Answered</span></h2>
+        <p class="lead">Everything you need to know before your first visit. Still have questions? We're just a phone call away.</p>
+        <a href="/contact" class="btn btn-primary" style="margin-top:24px">Ask a Question <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+        <div class="faq-contact-mini">
+          <span>Prefer to talk?</span>
+          <a href="tel:<%= business.phone %>"><%= business.phoneDisplay %></a>
+        </div>
+      </div>
+      <div class="faq-main" data-reveal="fade-left">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Is chiropractic treatment safe?</span>
+            <%- icon('chevron-down','faq-chevron') %>
+          </button>
+          <div class="faq-a"><p>Yes. Chiropractic care is widely recognized as one of the safest non-invasive, drug-free therapies for neuromusculoskeletal complaints. At SpineVita, every adjustment is preceded by a thorough exam to ensure it's the right approach for your specific condition. Serious adverse events are extremely rare, and our board-certified chiropractors use only evidence-based techniques.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>How many visits will I need?</span>
+            <%- icon('chevron-down','faq-chevron') %>
+          </button>
+          <div class="faq-a"><p>It depends on your condition, how long you've had it, and your overall health. Many patients feel meaningful relief within 4–8 visits, while chronic or complex cases may need a longer plan. After your initial assessment, we'll give you a clear, written treatment plan with an estimated timeline — no surprises, no pressure to continue beyond what you need.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Do you accept my insurance?</span>
+            <%- icon('chevron-down','faq-chevron') %>
+          </button>
+          <div class="faq-a"><p>We accept most major insurance plans including BlueCross BlueShield, UnitedHealthcare, Aetna, Cigna, Humana, and Medicare. We also handle auto-accident injury claims on a lien basis — meaning no upfront cost to you for qualifying cases. Call us at <%= business.phoneDisplay %> and we'll verify your benefits before your first visit.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>What should I expect at my first appointment?</span>
+            <%- icon('chevron-down','faq-chevron') %>
+          </button>
+          <div class="faq-a"><p>Your first visit takes about 45–60 minutes. We start with a consultation to understand your history and goals, then perform a physical exam including posture analysis, range-of-motion testing and any necessary orthopedic tests. If needed, we'll refer you for X-rays. In most cases you'll receive your first gentle adjustment on the same day.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Is a chiropractic adjustment painful?</span>
+            <%- icon('chevron-down','faq-chevron') %>
+          </button>
+          <div class="faq-a"><p>Most patients feel immediate relief after an adjustment, not pain. You may hear a gentle "pop" — that's just gas releasing from the joint, similar to cracking your knuckles. Some patients experience mild soreness for a day afterward, similar to post-workout soreness. If you're nervous about manual adjustments, we also offer low-force and instrument-assisted techniques that are extremely gentle.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Can you help with auto-accident injuries?</span>
+            <%- icon('chevron-down','faq-chevron') %>
+          </button>
+          <div class="faq-a"><p>Absolutely. Auto-accident injuries — especially whiplash, neck pain and back pain — are one of our specialties. We work on a lien basis, meaning we defer payment until your case settles, so there's no upfront cost to you. We also coordinate directly with your attorney and insurance company, and provide detailed documentation to support your claim.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt blog" id="blog">
+  <div class="wrap">
+    <div class="blog-head">
+      <div>
+        <span class="section-subtitle"><%- icon('file-text') %> From The Blog</span>
+        <h2 class="display-3" style="margin-top:12px">Everything You Didn't Know About Chiropractic Care</h2>
+      </div>
+      <a href="/blog" class="btn btn-outline">View All Articles <%- icon('arrow-right','ico-xs') %></a>
+    </div>
+
+    <% const featured = posts[0]; %>
+    <div class="blog-featured">
+      <div class="img">
+        <img src="<%= featured.image %>" alt="<%= featured.alt %>" width="600" height="340" loading="lazy" />
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="cat"><%= featured.category %></span><span><%= featured.date %></span><span>· <%= featured.readTime %></span></div>
+        <h3><%= featured.title %></h3>
+        <p><%= featured.excerpt %></p>
+        <ol>
+          <% featured.content.slice(1, 4).forEach(point => { %>
+          <li><%= point.heading.replace(/^\d+\.?\s*/, '') %></li>
+          <% }) %>
+        </ol>
+        <a href="/blog/<%= featured.id %>" class="btn btn-primary" style="margin-top:8px">Read Full Article <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+    </div>
+
+    <div class="blog-grid">
+      <% posts.slice(1).forEach((post, i) => { %>
+      <article class="blog-card hover-lift" data-reveal data-delay="<%= i + 1 %>">
+        <div class="img">
+          <img src="<%= post.image %>" alt="<%= post.alt %>" width="400" height="200" loading="lazy" />
+        </div>
+        <div class="txt">
+          <span class="cat"><%= post.category %></span>
+          <h4><%= post.title %></h4>
+          <p><%= post.excerpt %></p>
+          <a class="lnk" href="/blog/<%= post.id %>">Read article <%- icon('arrow-right','ico-xs') %></a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>

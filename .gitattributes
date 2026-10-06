@@ -1,0 +1,12 @@
+# Normalize line endings so the Cloudflare Pages (Linux) build is consistent
+* text=auto eol=lf
+
+# Binary assets
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

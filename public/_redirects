@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Canonical host path (avoids duplicate-content on /index.html)
+/index.html  /  301
+
+# Friendly alias
+/home  /  301

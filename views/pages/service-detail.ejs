@@ -1,0 +1,92 @@
+<section class="page-header">
+  <div class="wrap">
+    <span class="section-subtitle"><%- icon(service.iconName) %> <%= service.shortTitle %></span>
+    <h1><%= service.title %></h1>
+    <p><%= service.summary %></p>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/services">Services</a> / <span><%= service.shortTitle %></span>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="service-detail">
+      <div class="content">
+        <h2>What Is <%= service.title %>?</h2>
+        <p class="summary"><%= service.description %></p>
+
+        <h3>Benefits Of Treatment</h3>
+        <ul class="benefits-list">
+          <% service.benefits.forEach(benefit => { %>
+          <li><%= benefit %></li>
+          <% }) %>
+        </ul>
+
+        <h3>What To Expect</h3>
+        <p><%= service.whatToExpect %></p>
+
+        <div class="service-meta">
+          <div class="meta-card">
+            <b>Typical Visit</b>
+            <span><%= service.duration %></span>
+          </div>
+          <div class="meta-card">
+            <b>Recommended Frequency</b>
+            <span><%= service.frequency %></span>
+          </div>
+        </div>
+
+        <a href="/contact" class="btn btn-primary btn-lg">Book This Service <span class="arw"><%- icon('arrow-right','ico-xs') %></span></a>
+      </div>
+      <div class="img">
+        <img src="<%= service.image %>" alt="<%= service.alt %>" width="600" height="460" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap text-center">
+    <span class="section-subtitle"><%- icon('sparkles') %> Related Services</span>
+    <h2 class="display-3" style="margin-top:12px">Explore More Ways We Can Help</h2>
+
+    <div class="services-grid" style="margin-top:44px;text-align:left">
+      <% related.forEach(item => { %>
+      <article class="service-tile">
+        <div class="img">
+          <img src="<%= item.image %>" alt="<%= item.alt %>" width="400" height="220" loading="lazy" />
+        </div>
+        <div class="txt">
+          <h3><%= item.title %></h3>
+          <p><%= item.summary %></p>
+          <a class="lnk" href="/services/<%= item.id %>">Learn more <%- icon('arrow-right','ico-xs') %></a>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "<%= service.schemaType %>",
+  "name": "<%= service.title %> at SpineVita",
+  "description": "<%= service.summary %>",
+  "url": "<%= canonical %>",
+  "image": "<%= siteUrl %><%= service.image %>",
+  "provider": {
+    "@type": "MedicalBusiness",
+    "name": "SpineVita Chiropractic",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<%= business.address.street %>",
+      "addressLocality": "<%= business.address.city %>",
+      "addressRegion": "<%= business.address.state %>",
+      "postalCode": "<%= business.address.zip %>",
+      "addressCountry": "<%= business.address.country %>"
+    }
+  }
+}
+</script>

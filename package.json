@@ -1,0 +1,26 @@
+{
+  "name": "spinevita",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SpineVita Chiropractic - Kansas City chiropractor website. Express + EJS, prerendered to static HTML for Cloudflare Pages.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "build": "node build.js",
+    "preview": "npm run build && wrangler pages dev dist",
+    "deploy": "npm run build && wrangler pages deploy",
+    "cf:create": "wrangler pages project create spinevita --production-branch main"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.147.0"
+  }
+}

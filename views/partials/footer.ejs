@@ -1,0 +1,101 @@
+<!-- Footer CTA Banner -->
+<section class="footer-cta" id="contact">
+  <div class="wrap fcta-inner">
+    <div class="fcta-content">
+      <span class="fcta-badge"><span class="fb-dot"></span> Same-week appointments</span>
+      <h2>Ready To Take The First Step Toward A Pain-Free Life?</h2>
+      <p class="fcta-sub">Book your consultation today. Our Kansas City team will build a personalized plan to get you moving freely again.</p>
+    </div>
+    <form action="/contact" method="POST" class="fcta-form" aria-label="Newsletter signup form">
+      <input type="email" name="email" placeholder="Enter your email address" required aria-label="Email address" />
+      <button class="btn btn-secondary" type="submit">Get Started <span class="arw"><%- icon('arrow-right','ico-xs') %></span></button>
+    </form>
+  </div>
+  <div class="fcta-deco" aria-hidden="true"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" class="footer-logo" aria-label="SpineVita home">
+          <img src="/images/logo.webp" alt="SpineVita Chiropractic logo" width="146" height="42" />
+        </a>
+        <p class="footer-tag">Kansas City's root-cause chiropractic clinic. We help you move freely, heal fully and live without limits.</p>
+        <div class="footer-contact-mini">
+          <a href="tel:<%= business.phone %>" class="fcm-item"><%- icon('phone','ico-sm') %> <%= business.phoneDisplay %></a>
+          <a href="mailto:<%= business.email %>" class="fcm-item"><%- icon('mail','ico-sm') %> <%= business.email %></a>
+        </div>
+        <div class="social" aria-label="Social media links">
+          <a href="<%= business.social.facebook %>" aria-label="Facebook" target="_blank" rel="noopener"><%- icon('facebook') %></a>
+          <a href="<%= business.social.instagram %>" aria-label="Instagram" target="_blank" rel="noopener"><%- icon('instagram') %></a>
+          <a href="<%= business.social.x %>" aria-label="X" target="_blank" rel="noopener"><%- icon('twitter') %></a>
+          <a href="<%= business.social.youtube %>" aria-label="YouTube" target="_blank" rel="noopener"><%- icon('youtube') %></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/how-it-works">How It Works</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="/services/auto-accident-injury-care">Auto Accident Care</a></li>
+          <li><a href="/services/sciatica-nerve-pain">Sciatica &amp; Nerve Pain</a></li>
+          <li><a href="/services/headache-migraine-relief">Headache Relief</a></li>
+          <li><a href="/services/sports-injury-rehab">Sports Rehab</a></li>
+          <li><a href="/services/prenatal-chiropractic">Prenatal Care</a></li>
+          <li><a href="/services/spinal-decompression">Spinal Decompression</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-visit">
+        <h5>Visit Us</h5>
+        <div class="footer-loc-card">
+          <div class="flc-icon"><%- icon('map-pin') %></div>
+          <div class="flc-text">
+            <b><%= business.address.street %></b>
+            <span><%= business.address.city %>, <%= business.address.state %> <%= business.address.zip %></span>
+          </div>
+        </div>
+        <div class="hours">
+          <div class="r"><span>Mon – Fri</span><b><%= business.hours.mon.replace('-', ' – ') %></b></div>
+          <div class="r"><span>Saturday</span><b><%= business.hours.sat.replace('-', ' – ') %></b></div>
+          <div class="r"><span>Sunday</span><b><%= business.hours.sun %></b></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <%= year %> <%= business.name %>. All rights reserved.</span>
+      <div class="fb-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </div>
+  <div class="wordmark"><span>SPINEVITA</span></div>
+</footer>
+
+<!-- Back to top button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <%- icon('arrow-up') %>
+</button>
+
+<!-- Floating mobile CTAs -->
+<div class="float-cta" id="floatCta">
+  <a href="tel:<%= business.phone %>" class="float-btn float-call" aria-label="Call us">
+    <%- icon('phone') %>
+  </a>
+  <a href="/contact" class="float-btn float-book" aria-label="Book appointment">
+    <%- icon('calendar') %>
+  </a>
+</div>
